@@ -45,7 +45,7 @@ public class SolarDataSyn {
         new HashMap<String, String>(2) {
           {
             put("Content-Type", "application/json;charset=UTF-8");
-            put("authorization", "bearer D-5d7c55a8-2ea6-4d67-a9f0-d708ebb1b3d6");
+            put("authorization", "bearer D-3834935d-12b3-4bbc-8e8f-bdc716954fc8");
           }
         };
     Response response = post(listUrl, requestJson, headers);
@@ -85,6 +85,6 @@ public class SolarDataSyn {
         (JSONObject)
             JSONUtil.parseObj(Objects.requireNonNull(response1.body()).string())
                 .getByPath("data.baseInfo");
-    System.out.println(jsonObject.toStringPretty());
+    System.out.println(jsonObject);
   }
 }
